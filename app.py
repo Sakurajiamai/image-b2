@@ -1,3 +1,7 @@
+# 1.支持登录上传
+# 2.图片存储到b2中
+# 3.支持批量上传
+# 4.生成html格式
 import os
 import requests
 from b2sdk.v1 import InMemoryAccountInfo, B2Api
