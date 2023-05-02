@@ -7,9 +7,9 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 # 设置B2存储相关信息
-B2_ACCOUNT_ID = "B2_ACCOUNT_ID"
-B2_APPLICATION_KEY = "B2_APPLICATION_KEY"
-B2_BUCKET_NAME = "B2_BUCKET_NAME"
+B2_ACCOUNT_ID = "004771923a64e270000000006"
+B2_APPLICATION_KEY = "K004BT8mvEiMzf6iLrSbq1Aw9am6A6Y"
+B2_BUCKET_NAME = "Aimages"
 
 # B2_ACCOUNT_ID = os.environ.get("B2_ACCOUNT_ID")
 # B2_APPLICATION_KEY = os.environ.get("B2_APPLICATION_KEY")
@@ -122,7 +122,7 @@ def upload_files():
             current_date = datetime.now().strftime('%Y/%m/%d/')
             b2_filename = current_date + file.filename
             bucket.upload_bytes(file.read(), b2_filename)
-            b2_file_url = f'https://{B2_BUCKET_NAME}.s3.us-west-002.backblazeb2.com/{b2_filename}'
+            b2_file_url = f'https://{B2_BUCKET_NAME}.s3.us-west-004.backblazeb2.com/{b2_filename}'
             image_urls.append(b2_file_url)
             html_image_links.append(f'<img src="{b2_file_url}" alt="{file.filename}" />')
 

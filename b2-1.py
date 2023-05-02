@@ -10,9 +10,9 @@ from datetime import datetime
 from flask import Flask, request, render_template_string
 from b2sdk.v1 import InMemoryAccountInfo, B2Api
 
-B2_ACCOUNT_ID = "B2_ACCOUNT_ID"
-B2_APPLICATION_KEY = "B2_APPLICATION_KEY"
-B2_BUCKET_NAME = "B2_BUCKET_NAME"
+B2_ACCOUNT_ID = "004771923a64e270000000006"
+B2_APPLICATION_KEY = "K004BT8mvEiMzf6iLrSbq1Aw9am6A6Y"
+B2_BUCKET_NAME = "Aimages"
 # 初始化Flask应用
 app = Flask(__name__)
 
@@ -33,7 +33,7 @@ def upload_files():
             current_date = datetime.now().strftime('%Y/%m/%d/')
             b2_filename = current_date + file.filename
             bucket.upload_bytes(file.read(), b2_filename)
-            b2_file_url = f'https://{B2_BUCKET_NAME}.s3.us-west-002.backblazeb2.com/{b2_filename}'
+            b2_file_url = f'https://{B2_BUCKET_NAME}.s3.us-west-004.backblazeb2.com/{b2_filename}'
             image_links.append(b2_file_url)
 
     if image_links:

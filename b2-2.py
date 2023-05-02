@@ -11,9 +11,9 @@ from flask import Flask, request, render_template_string
 from b2sdk.v1 import InMemoryAccountInfo, B2Api
 import requests
 # # 设置B2存储相关信息
-B2_ACCOUNT_ID = "B2_ACCOUNT_ID"
-B2_APPLICATION_KEY = "B2_APPLICATION_KEY"
-B2_BUCKET_NAME = "B2_BUCKET_NAME"
+B2_ACCOUNT_ID = "004771923a64e270000000006"
+B2_APPLICATION_KEY = "K004BT8mvEiMzf6iLrSbq1Aw9am6A6Y"
+B2_BUCKET_NAME = "Aimages"
 
 # 初始化Flask应用
 app = Flask(__name__)
@@ -104,3 +104,6 @@ def index():
 '''
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+# Aimages
+# 004771923a64e270000000006
+# K004BT8mvEiMzf6iLrSbq1Aw9am6A6Y
