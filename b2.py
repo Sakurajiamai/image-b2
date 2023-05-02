@@ -122,7 +122,7 @@ def upload_files():
             current_date = datetime.now().strftime('%Y/%m/%d/')
             b2_filename = current_date + file.filename
             bucket.upload_bytes(file.read(), b2_filename)
-            b2_file_url = f'https://{B2_BUCKET_NAME}.s3.us-west-004.backblazeb2.com/{b2_filename}'
+            b2_file_url = f'https://{B2_BUCKET_NAME}.s3.us-west-002.backblazeb2.com/{b2_filename}'
             image_urls.append(b2_file_url)
             html_image_links.append(f'<img src="{b2_file_url}" alt="{file.filename}" />')
 

@@ -7,9 +7,9 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 # 设置B2存储相关信息
-B2_ACCOUNT_ID = "004771923a64e270000000006"
-B2_APPLICATION_KEY = "K004BT8mvEiMzf6iLrSbq1Aw9am6A6Y"
-B2_BUCKET_NAME = "Aimages"
+B2_ACCOUNT_ID = "B2_ACCOUNT_ID"
+B2_APPLICATION_KEY = "B2_APPLICATION_KEY"
+B2_BUCKET_NAME = "B2_BUCKET_NAME"
 
 # B2_ACCOUNT_ID = os.environ.get("B2_ACCOUNT_ID")
 # B2_APPLICATION_KEY = os.environ.get("B2_APPLICATION_KEY")
